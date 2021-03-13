@@ -1,0 +1,104 @@
+.crearGifoss {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .crearGifoss {
+        display: initial;
+        background: transparent;
+        border: 1px solid rgb(87, 46, 229);
+        border-radius: 50%;
+        height: 3em;
+        width: 3em;
+        color: rgb(87, 46, 229);
+        cursor: pointer;
+
+        &-icono {
+            font-size: 1.5em;
+        }
+    }
+
+    .crearGifoss:hover {
+        background: rgb(87, 46, 229);
+        color: rgb(255, 255, 255);
+    }
+}
+
+.boton {
+    border: 1px solid rgb(87, 46, 229);
+    border-radius: 1.5em;
+    border-radius: 1.5em;
+    padding: 1em 2em;
+    color: rgb(87, 46, 229);
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8em;
+    font-weight: 700;
+    background: transparent;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: rgb(87, 46, 229);
+    color: rgb(255, 255, 255);
+}
+
+.flechas {
+    display: none;
+}
+
+.flechas:hover {
+    background: rgb(87, 46, 229);
+    color: rgb(255, 255, 255);
+}
+
+.btnsDark{
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+.btnsDark:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
+}
+
+@media screen and (min-width: 1024px) {
+    .flechas {
+        border: 1px solid rgb(87, 46, 229);
+        height: 2.1em;
+        width: 2.1em;
+        padding: .5em;
+        color: rgb(87, 46, 229);
+        font-size: 1.5em;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+.btnPasos {
+    border: 1px solid rgb(87, 46, 229);
+    height: 2.1em;
+    width: 2.1em;
+    border-radius: 50%;
+    background: transparent;
+    color: rgb(87, 46, 229);
+    font-size: 1.1em;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;;
+    margin: 0 .5em;
+    cursor: pointer;
+}
+
+.btnPasos:hover {
+    background: rgb(87, 46, 229);
+    color: rgb(255, 255, 255);
+}
+.btnsDark{
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+.btnsDark:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
+}

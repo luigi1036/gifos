@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/normalize.css">
+    <link rel="stylesheet" href="./estilos/estilos.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <title>GIFOS</title>
+</head>
+
+<body >
+    <div data-nav class="lineaSuperior"></div>
+    <header data-body class="header">
+        <div class="header-contenedor">
+            <div class="header-contenedor-cover">
+                <div class="header-icono icono">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="header-iconoCerrar iconoCerrar">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="header-contenedorImagen">
+                    <img src="./imagenes/logoMobile.svg" class="header-contenedorImagen-logo-mobile" alt="logo-mobile">
+                    <img src="./imagenes/logoMobileModoNoct.svg" class="header-contenedorImagen-logo-mobile-dark" alt="logo-mobile-dark">
+                    <img src="./imagenes/logoDesktop.svg" class="header-contenedorImagen-logo-desktop" alt="logo-desktop">
+                    <img src="./imagenes/LogoModoNoc.svg" class="header-contenedorImagen-logo-desktop-dark" alt="logo-desktop-dark">
+                </div>
+            </div>
+            <nav data-nav class="navbar">
+                <ul class="navbar-items">
+                    <li data-navbar class="navbar-items-item">
+                        <a data-link href="#" class="navbar-items-item-link modo">Modo Nocturno</a>
+                    </li>
+                    <li data-navbar class="navbar-items-item">
+                        <a  data-link href="#favoritos" class="navbar-items-item-link favorito">Favoritos</a>
+                    </li>
+                    <li data-navbar class="navbar-items-item">
+                        <a data-link href="#misGifos" class="navbar-items-item-link misGif">Mis Gifos</a>
+                    </li>
+                </ul>
+                <a href="#crearGifos"> 
+                    <button data-buton type="button" class="crearGifoss crearGif">
+                        <i class="fal fa-plus crearGifoss-icono"></i>
+                    </button></a>
+            </nav>
+        </div>
+    </header>
+    <main >
+        <section data-body class="principal" id="principal">
+            <div class="principal-cover">
+                <h1 data-body class="principal-titulo">
+                    Inspírate, busca, guarda, y crea los mejoress <Span class="principal-titulo-span" >GIFOS</Span>
+                </h1>
+                <div class="principal-contenedor">
+                    <img src="./imagenes/ilustraHeader.svg" alt="imagen" class="principal-contenedor-imagen">
+                </div>
+                <div data-body class="principal-div">
+                    <input type="text" placeholder="Busca GIFOS y más" class="principal-div-buscador">
+                    <div data-body class="principal-div-sugerencias"></div>
+                    <i data-body class="fal fa-search principal-div-icono"></i>
+                    <i data-body class="fal fa-times principal-div-iconoCerrar"></i>
+                </div>
+                <div data-body class="principal-contenedor2">
+                    <h5 class="principal-contenedor2-titulo">Trending</h5>
+                    <p class="principal-contenedor2-parrafo">
+                        Reactions, Entertainment, Sports, Stickers, Artists
+                    </p>
+                </div>
+                <div class="principal-sinContenido">
+                    <img src="./imagenes/iconBusquedaSinResultado.svg" alt="Sin Contenido">
+                    <h3 class="principal-sinContenido-texto">
+                        Intenta con otra búsqueda.
+                    </h3>
+                </div>
+            </div>
+            <section class="resultado">
+                <div class="resultado-gifs">
+                    <h3 data-body class="resultado-gifs-titulo"></h3>
+                    <div class="resultado-gifs-contenedor">
+                        <div class="resultado-gifs-contenedor-cover">
+                            <div class="divGif">
+                                <div class="divGif-iconos">
+                                    <button type="button" class="divGif-iconos-icono">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button type="button" class="divGif-iconos-icono">
+                                        <i class="fas fa-arrow-to-bottom"></i>
+                                    </button>
+                                    <button type="button" class="divGif-iconos-icono">
+                                        <i class="fas fa-expand-alt"></i>
+                                    </button>
+                                </div>
+                                <div class="divGif-informacion">
+                                    <h6 class="divGif-informacion-usuario"></h6>
+                                    <p class="divGif-informacion-titulo"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button data-buton type="button" class="boton" id="verMasBuscador">
+                        VER MÁS
+                    </button>
+                </div>
+            </section>
+        </section>
+        <section class="misGifos" id="misGifos">
+            <div data-body class="misGifos-cover">
+                <div class="misGifos-gifs">
+                    <img src="./imagenes/iconMisGifos.svg" alt="Mis gifos">
+                    <h1 data-body class="misGifos-gifs-titulo">Mis GIFOS</h1>
+                    <div class="misGifos-gifs-contenedor">
+                        <div class="misGifos-gifs-contenedor-buscador"></div>
+                    </div>
+                    <div class="misGifos-gifs-sinContenido">
+                        <img src="./imagenes/iconMisGifosSinContenido.svg" alt="sin contenido">
+                        <h3 class="misGifos-gifs-sinContenido-parrafo">
+                            ¡Anímate a crear tu primer GIFO!
+                        </h3>
+                    </div>
+                    <button data-buton type="button" class="boton" id="verMasMisGif">
+                        VER MÁS
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="favoritos" id="favoritos">
+            <div data-body class="favoritos-cover">
+                <div data-body class="favoritos-gifs">
+                    <img src="./imagenes/iconFavoritos.svg" alt="favoritos" />
+                    <h1 data-body class="favoritos-gifs-titulo">Favoritos</h1>
+                    <div class="favoritos-gifs-contenedor">
+                        <div class="favoritos-gifs-contenedor-buscador"></div>
+                    </div>
+                    <div class="favoritos-gifs-sinContenido">
+                        <img src="./imagenes/iconFavSinContenido.svg" alt="Sin Contenido" />
+                        <h3 class="favoritos-gifs-sinContenido-parrafo">
+                            "¡Guarda tu primer GIFO en Favoritos para que se muestre aquí!"
+                        </h3>
+                    </div>
+                    <button data-buton type="button" class="boton" id="verMasFavoritos">
+                        VER MÁS
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section data-trending class="trendingGifos">
+            <div class="trendingGifos-texto">
+                <h1 data-trending class="trendingGifos-texto-titulo">Trending GIFOS</h1>
+                <p data-trending class="trendingGifos-texto-parrafo">
+                    Mira los últimos GIFOS de nuestra comunidad.
+                </p>
+            </div>
+            <div class="trendingGifos-contenedor">
+                <button data-buton type="button" class="flechas trendingGifos-contenedor-boton atras">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="trendingGifos-contenedor-div">
+                    <div class="trendingGifos-contenedor-div-gif"></div>
+                </div>
+                <button data-buton type="button" class="flechas trendingGifos-contenedor-boton adelante">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="trendingGifos-divExtra">
+                <div class="trendingGifos-divExtra-iconoCerrar divExtrar-cerrar">
+                    <i class="fal fa-times"></i>
+                </div>
+                <div class="trendingGifos-divExtra-imagenes">
+                    <img class="trendingGifos-divExtra-imagenes-imagen" alt="" src="">
+                </div>
+                <div class="trendingGifos-divExtra-contenedor">
+                    <div class="trendingGifos-divExtra-contenedor-informacion">
+                        <h3 class="trendingGifos-divExtra-contenedor-informacion-usuario"></h3>
+                        <h4 class="trendingGifos-divExtra-contenedor-informacion-titulo"></h4>
+                    </div>
+                    <div class="trendingGifos-divExtra-contenedor-iconos">
+                        <div class="trendingGifos-divExtra-contenedor-iconos-favorito">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="trendingGifos-divExtra-contenedor-iconos-descarga">
+                            <i class="far fa-arrow-to-bottom"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="crearGifos">
+            <div class="crearGifos-cover">
+                <div class="crearGifos-grabar">
+                    <img data-camara src="./imagenes/elementCamara.svg" alt="camara" class="crearGifos-grabar-camara">
+                    <img src="./imagenes/elementLuzCamara.svg" alt="luz-camara" class="crearGifos-grabar-luz-camara">
+                    <img data-camara src="./imagenes/elementCinta2.svg" alt="cinta-grande" class="crearGifos-grabar-cinta-grande">
+                    <img data-camara src="./imagenes/elementCinta1.svg" alt="cinta-pequeña" class="crearGifos-grabar-cinta-pequeña">
+                    <img data-camara src="./imagenes/camara-modo-noc.svg" alt="camara" class="crearGifos-grabar-camara camaraDakr display">
+                  
+                </div>
+                <div data-body class="crearGifos-contenedor">
+                    <div data-body class="crearGifos-contenedor-rectangulo">
+                        <div  data-body class="crearGifos-contenedor-rectangulo-video">
+                            <div data-body class="crearGifos-contenedor-rectangulo-video-wide"></div>
+                            <div data-body class="crearGifos-contenedor-rectangulo-video-height"></div>
+                            <div data-body class="crearGifos-contenedor-rectangulo-video-paso1">
+                                <h3 class="crearGifos-contenedor-rectangulo-video-paso1-titulo">
+                                    Aquí podrás crear tus propios GIFOS
+                                </h3>
+                                <p class="crearGifos-contenedor-rectangulo-video-paso1-parrafo">
+                                    ¡Crea tu GIFO en sólo 3 pasos! (sólo necesitas una cámara
+                                    para grabar un video).
+                                </p>
+                            </div>
+                            <div class="crearGifos-contenedor-grabadora">
+                                <video class="crearGifos-contenedor-grabadora-grabar">
+                                    No video support in your Browser
+                                </video>
+                                <div class="crearGifos-contenedor-grabadora-divExtra">
+                                    <div class="crearGifos-contenedor-grabadora-divExtra-iconos">
+                                        <div class="crearGifos-contenedor-grabadora-divExtra-iconos-icono">
+                                            <i class="fas fa-arrow-to-bottom crearGifos-icondown"></i>
+                                        </div>
+                                        <div class="crearGifos-contenedor-grabadora-divExtra-iconos-icono">
+                                            <i class="fas fa-link"></i>
+                                        </div>
+                                    </div>
+                                    <div class="crearGifos-contenedor-grabadora-divExtra-informacion">
+                                        <i class="fas fa-spinner crearGifos-contenedor-grabadora-divExtra-informacion-icono iconoInfo"></i>
+                                        <p class="crearGifos-contenedor-grabadora-divExtra-informacion-titulo textoInfo">
+                                            Estamos subiendo tu GIFO
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="crearGifos-contenedor-botones">
+                        <button data-buton type="button" class="btnPasos" id="uno">1</button>
+                        <button data-buton type="button" class="btnPasos" id="dos">2</button>
+                        <button data-buton type="button" class="btnPasos" id="tres">3</button>
+                        <p class="crearGifos-contenedor-botones-tiempo">00:00:00:00</p>
+                        <h2 data-buton class="crearGifos-contenedor-botones-repetir">repetir captura </h2>
+                    </div>
+                    <div class="crearGifos-contenedor-line"></div>
+                    <button data-buton type="button" class="boton comenzar">COMENZAR</button>
+                    <button data-buton type="button" class="boton crearGifos-contenedor-btnGrabar grabar">GRABAR</button>
+                    <button data-buton type="button" class="boton crearGifos-contenedor-btnFinalizar finalizar">FINALIZAR</button>
+                    <button data-buton type="button" class="boton crearGifos-contenedor-btnSubirGif subirGif">SUBIR GIFO</button>
+                </div>
+                <img data-camara src="./imagenes/pelicula.svg" alt="pelicula" class="cinta crearGifos-cinta">
+                <img data-camara src="./imagenes/pelicula-modo-noc.svg" alt="pelicula" class="cinta crearGifos-cinta display">
+            </div>
+        </section>
+    </main>
+    <footer data-body class="footer">
+        <div class="footer-cover">
+            <div class="footer-contenedor">
+                <h6 data-body class="footer-contenedor-titulo">Compartir en:</h6>
+                <div  data-body class="footer-contenedor-iconos">
+                    <a href="https://www.facebook.com/" rel="noreferrer noopener" target="_blank">
+                        <i class="fab fa-facebook-f footer-contenedor-iconos-icono"></i>
+                    </a>
+                    <a href="https://twitter.com/" rel="noreferrer noopener" target="_blank">
+                        <i class="fab fa-twitter footer-contenedor-iconos-icono"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" rel="noreferrer noopener" target="_blank">
+                        <i class="fab fa-instagram footer-contenedor-iconos-icono"></i>
+                    </a>
+                </div>
+            </div>
+            <h6 data-body class="footer-contenedor-pie">© GIFOS 2020 All Rights Reserved.</h6>
+        </div>
+    </footer>
+    <div data-nav class="lineaInferior"></div>
+    <script type="module" src="./scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+.lineaSuperior {
+    height: 5px;
+    background-color: rgb(87, 46, 229);
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+.lineaInferior {
+    height: 5px;
+    background-color: rgb(87, 46, 229);
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 1;
+
+
+    &-contenedor {
+        &-cover {
+            max-width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+
+    &-icono {
+        font-size: 1.5em;
+        color: rgb(87, 46, 229);
+        padding-top: 1.5em;
+
+        &.active {
+            display: none;
+        }
+    }
+
+    &-iconoCerrar {
+        display: none;
+        font-size: 1.5em;
+        color: rgb(87, 46, 229);
+        padding-top: 1.5em;
+
+        &.active {
+            display: initial;
+        }
+    }
+
+    &-contenedorImagen {
+        max-width: 90%;
+        margin: 0;
+        padding: 1.5em 0 .5em;
+
+        &-logo {
+            &-mobile {
+                &-dark {
+                    display: none;
+                }
+            }
+
+            &-desktop {
+                display: none;
+
+                &-dark {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.navbar {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: rgba(87, 46, 229, 0.90);
+    height: 90vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1em;
+    line-height: 3.5em;
+
+    &.active {
+        display: initial;
+        position: fixed;
+        top: 5.6em;
+    }
+
+    &-items {
+        list-style: none;
+        text-align: center;
+        padding: 1em 0 0;
+
+        &-item {
+            position: relative;
+            &-link {
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                display: block;
+            }
+
+            // &:after {
+            //     content: '';
+            //     position: absolute;
+            //     bottom: 0;
+            //     left: calc(50% - 20px);
+            //     width: 2.1em;
+            //     border-bottom: 1px solid rgb(255, 255, 255);
+            // }
+        }
+    }
+}
+
+.oscuro{
+    background-color: rgb(55, 56, 60);
+    color: rgb(255, 255, 255);
+}
+
+.display{
+    display: none;
+}
+.visible{
+    display: block;
+}
+.dark{
+    color: rgb(255, 255, 255);
+}
+
+.navbardark{
+    background-color: rgb(0, 0, 0);
+}
+
+
+@media screen and (min-width: 1024px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1em;
+
+        &-contenedor {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &-cover {
+                margin: 0;
+            }
+        }
+
+        &-icono {
+            display: none;
+        }
+
+        &-iconoCerrar {
+            display: none;
+        }
+
+        &-contenedorImagen {
+            margin: 0;
+            padding: 0;
+
+            &-logo {
+                &-mobile {
+                    display: none;
+                }
+
+                &-desktop {
+                    display: inline;
+                }
+            }
+
+            &-icono {
+                display: none;
+            }
+        }
+    }
+
+    .navbar {
+        display: flex;
+        position: initial;
+        height: initial;
+        width: initial;
+        line-height: initial;
+        background: transparent;
+        font-size: .8em;
+        margin: 0;
+
+        &-items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            margin: 0 0 .5em;
+
+            &-item {
+                padding-right: 4em;
+
+                &-link {
+                    color: rgb(87, 46, 229);
+                    position: relative;
+                }
+                &-link:active{
+                        color: rgb(156,175,195);
+                    
+                }
+
+                :first-child::after {
+                    display: none;
+                }
+
+                :before {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    bottom: -20%;
+                    height: .2em;
+                    width: 100%;
+                    background: rgb(80,227,194);
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    transition: transform .4s linear;
+                }
+
+                :hover:before {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+            }
+        }
+
+        &-link {
+            text-decoration: block;
+        }
+    }
+    .displayDestok{
+        display: none;
+    }
+    .visibleDestok{
+        display: block;
+    }
+
+    .linkdakr{
+    color: rgb(255, 255, 255);
+    }
+}
