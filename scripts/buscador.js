@@ -6,7 +6,7 @@ import {descargarGif} from './generales.js';
 //elementos del Dom
 const d = document,
 // $iconobuscador = d.querySelector(".principal-div-icono"),
-// $iconoCerrar = d.querySelector(".principal-div-iconoCerrar"),
+$iconoCerrar = d.querySelector(".principal-div-iconoCerrar"),
 $btnVerBuscador = d.getElementById("verMasBuscador"),
 $divSugerencias =d.querySelector(".principal-div-sugerencias"),
 $buscador = d.querySelector(".principal-div-buscador"),
@@ -108,4 +108,11 @@ function mostrargifs(data, pag){
         e.valor = $buscador.value;
         buscadorGifs(e);
     });
+}
+
+$iconoCerrar.addEventListener("click", limpiar);
+
+function limpiar(e){
+    $buscador.value = "";
+    $divSugerencias.style.display = "none";
 }
