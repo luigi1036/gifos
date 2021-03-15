@@ -5,9 +5,13 @@ const URL_GETBYID = "https://media.giphy.com/media/";
 
 
 export const conexion = async (ruta, clave, limite, offset) => {
+  if(limite===undefined){
+    limite=20;
+  }
   try {
     let respuesta = await fetch(`${URL}${ruta}?api_key=${API_KEY}&q=${clave}&limit=${limite}&offset=${offset}`);
     const data = await respuesta.json();
+    console.log(data)
     return data;
   } catch (e) {
     console.log(e);
@@ -20,7 +24,7 @@ export const conexionSubirGif = async (parametros) => {
     let data = await respuesta.json();
     return data;
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
 };
 

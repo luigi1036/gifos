@@ -33,7 +33,7 @@ export async function sugerencias(e){
     if(data.length>0){
         $divSugerencias.innerHTML = "";
         $divSugerencias.style.display = "block";
-        for(let i=0;i<5;i++){
+        for(let i=0;i<data.length;i++){
             let $div = d.createElement("div");
             let $icono = d.createElement("i");
             let $lista = d.createElement("li");

@@ -76,7 +76,7 @@ export function mostrarCrearGifos(){
 
 }
 
-export function grabarGif(){
+export const grabarGif = async ()=>{
     $tiempo.style.display = "block";
     $btnGrabar.style.display = "none";
     $btnFinalizar.style.display = "inherit";
