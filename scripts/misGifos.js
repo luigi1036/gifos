@@ -42,7 +42,6 @@ export function mostrarGifos(){
 
 async function mostrarMisGifos(){
     const misGifos = await traerGifos();
-    console.log(misGifos.length)
     if (misGifos.length>0) {
         $contenedorMisGifos.innerHTML = "";
         $divSinContenido.style.display = "none";

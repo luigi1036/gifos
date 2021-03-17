@@ -11,7 +11,6 @@ export const conexion = async (ruta, clave, limite, offset) => {
   try {
     let respuesta = await fetch(`${URL}${ruta}?api_key=${API_KEY}&q=${clave}&limit=${limite}&offset=${offset}`);
     const data = await respuesta.json();
-    console.log(data)
     return data;
   } catch (e) {
     console.log(e);
