@@ -26,10 +26,7 @@ let paginacion=0;
 export async function sugerencias(e){
     const respuesta = await conexion('search/tags', e.target.value);
     const data = respuesta.data;
-    if(e.keyCode==13){
-        e.valor= e.target.value;
-        buscadorGifs(e);
-    }
+    
     if(data.length>0){
         $divSugerencias.innerHTML = "";
         $divSugerencias.style.display = "block";
@@ -44,11 +41,28 @@ export async function sugerencias(e){
             $div.appendChild($icono);
             $div.appendChild($lista);
             $divSugerencias.appendChild($div);
+            
         }
+        
+        
+        
     }else{
         $divSugerencias.innerHTML = "";
     }
+    if(e.keyCode==13){
+        e.valor= e.target.value;
+        buscadorGifs(e);
+    }
+    let $listaSugerencia = d.querySelectorAll(".principal-div-sugerencias-resultados-lista");
+        for(let lista of  $listaSugerencia){
+            lista.addEventListener("click", ()=>{
+                $buscador.value = lista.textContent;
+                e.valor = lista.textContent;
+                buscadorGifs(e)
+            } );
+        }
 }
+
 
 async function buscadorGifs(e) {
     let clave;

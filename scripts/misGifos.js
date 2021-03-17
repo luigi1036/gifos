@@ -42,7 +42,7 @@ export function mostrarGifos(){
 
 async function mostrarMisGifos(){
     const misGifos = await traerGifos();
-    if (misGifos.length>0) {
+    if (misGifos != undefined) {
         $contenedorMisGifos.innerHTML = "";
         $divSinContenido.style.display = "none";
         $contenedorMisGifos.style.display = "grid";
